@@ -63,17 +63,20 @@ const CountdownTimer: React.FC = () => {
 
   return (
     <div>
+      <div className="text-6xl text-center">
+        {minutes.toString().padStart(2, "0")}:
+        {seconds.toString().padStart(2, "0")}
+      </div>
       <input
+      className="bg-white/50"
         type="number"
         value={minutes}
         onChange={handleMinutesChange}
         placeholder="Enter minutes"
       />
+      <div className="flex flex-row gap-2">
       <button onClick={handleStart}>Start</button>
       <button onClick={handleStop}>Stop</button>
-      <div>
-        Timer: {minutes.toString().padStart(2, "0")}:
-        {seconds.toString().padStart(2, "0")}
       </div>
     </div>
   );
