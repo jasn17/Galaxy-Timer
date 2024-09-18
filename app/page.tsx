@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
+// @ts-expect-error - no types available
 import useSound from "use-sound";
 
 export default function Home() {
