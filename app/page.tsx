@@ -35,10 +35,10 @@ const CountdownTimer: React.FC = () => {
       setMinutes((minutes) => minutes - 1);
       setSeconds(59);
     } else if (minutes === 0 && seconds === 0 && isActive) {
-      alert("Time is up!");
       play();
       setIsActive(false);
       clearInterval(interval!);
+      alert("Time is up!");
     }
 
     return () => {
